@@ -44,18 +44,15 @@ class ComposeViewController: UIViewController {
     
     func restoreOriginalY(buttonArray: [UIButton], locationArray: [CGFloat]) {
         
+        var delay = 0.05
+        
         for (index, button) in buttonArray.enumerated() {
             
-            let delay = (Double(Double(arc4random()) / Double(UINT32_MAX)) / 4)
+            delay += 0.05
             
-            print ("Button: \(button)")
-            print ("Delay: \(delay)")
-            
-            UIView.animate(withDuration: 0.4, delay: delay, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: [.curveEaseOut], animations: {
+            UIView.animate(withDuration: 0.4, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.1, options: [.curveEaseOut], animations: {
                 button.center.y = locationArray[index]
             })
-            
-
             
             
         }
