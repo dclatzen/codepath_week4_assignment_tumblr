@@ -20,6 +20,10 @@
 		44FA8C721DCD38C6002EE69D /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C711DCD38C6002EE69D /* ComposeViewController.swift */; };
 		44FA8C741DCD38E8002EE69D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C731DCD38E8002EE69D /* AccountViewController.swift */; };
 		44FA8C761DCD3948002EE69D /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C751DCD3948002EE69D /* TrendingViewController.swift */; };
+		44FA8C791DD1041F002EE69D /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C771DD1041F002EE69D /* BaseTransition.swift */; };
+		44FA8C7A1DD1041F002EE69D /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C781DD1041F002EE69D /* FadeTransition.swift */; };
+		44FA8C7C1DD105B9002EE69D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C7B1DD105B9002EE69D /* Common.swift */; };
+		44FA8C7E1DD10CD7002EE69D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA8C7D1DD10CD7002EE69D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		44FA8C711DCD38C6002EE69D /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		44FA8C731DCD38E8002EE69D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		44FA8C751DCD3948002EE69D /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		44FA8C771DD1041F002EE69D /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		44FA8C781DD1041F002EE69D /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		44FA8C7B1DD105B9002EE69D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		44FA8C7D1DD10CD7002EE69D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 		44FA8C311DCD0A3E002EE69D = {
 			isa = PBXGroup;
 			children = (
+				44FA8C7D1DD10CD7002EE69D /* LoginViewController.swift */,
 				44FA8C3C1DCD0A3F002EE69D /* codepath_week4_assignment_tumblr */,
 				44FA8C511DCD0A3F002EE69D /* codepath_week4_assignment_tumblrTests */,
 				44FA8C5C1DCD0A3F002EE69D /* codepath_week4_assignment_tumblrUITests */,
@@ -118,6 +127,9 @@
 				44FA8C6F1DCD36C7002EE69D /* SearchViewController.swift */,
 				44FA8C6D1DCD3586002EE69D /* HomeViewController.swift */,
 				44FA8C6B1DCD31E9002EE69D /* TabBarViewController.swift */,
+				44FA8C771DD1041F002EE69D /* BaseTransition.swift */,
+				44FA8C781DD1041F002EE69D /* FadeTransition.swift */,
+				44FA8C7B1DD105B9002EE69D /* Common.swift */,
 				44FA8C441DCD0A3F002EE69D /* Assets.xcassets */,
 				44FA8C461DCD0A3F002EE69D /* LaunchScreen.storyboard */,
 				44FA8C491DCD0A3F002EE69D /* Info.plist */,
@@ -277,11 +289,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FA8C7E1DD10CD7002EE69D /* LoginViewController.swift in Sources */,
 				44FA8C701DCD36C7002EE69D /* SearchViewController.swift in Sources */,
 				44FA8C761DCD3948002EE69D /* TrendingViewController.swift in Sources */,
 				44FA8C401DCD0A3F002EE69D /* ViewController.swift in Sources */,
 				44FA8C741DCD38E8002EE69D /* AccountViewController.swift in Sources */,
+				44FA8C7C1DD105B9002EE69D /* Common.swift in Sources */,
+				44FA8C791DD1041F002EE69D /* BaseTransition.swift in Sources */,
 				44FA8C6C1DCD31E9002EE69D /* TabBarViewController.swift in Sources */,
+				44FA8C7A1DD1041F002EE69D /* FadeTransition.swift in Sources */,
 				44FA8C721DCD38C6002EE69D /* ComposeViewController.swift in Sources */,
 				44FA8C3E1DCD0A3F002EE69D /* AppDelegate.swift in Sources */,
 				44FA8C6E1DCD3586002EE69D /* HomeViewController.swift in Sources */,

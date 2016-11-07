@@ -14,9 +14,11 @@ class TabBarViewController: UIViewController {
 
     @IBOutlet var buttons:[UIButton]!
     @IBOutlet var viewControllers: [UIViewController]!
+    @IBOutlet weak var exploreButton: UIImageView!
     
     var currentTabSelected: Int = 0
     var selectedIndex: Int = 0
+    var exploreButtonOriginalY: CGFloat!
     
     // instance variables for view controllers
     var homeViewController: UIViewController!
@@ -24,6 +26,7 @@ class TabBarViewController: UIViewController {
     var composeViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
+    
     
     
     
@@ -49,6 +52,8 @@ class TabBarViewController: UIViewController {
         buttons[selectedIndex].isSelected = true
         didPressTab(buttons[selectedIndex])
         
+        bobTheExploreButton()
+        
     }
 
     @IBAction func didPressTab(_ sender: UIButton) {
@@ -62,6 +67,12 @@ class TabBarViewController: UIViewController {
         
         // Turn off the selected state for the previously-selected button. Since we have an array that contains the buttons, we can reference buttons with tag numbers, corresponding to their index value. This references the currently-selected button (not the newly-pressed one).
         buttons[previousIndex].isSelected = false
+        
+        print ("previousIndex: \(previousIndex)")
+        print ("buttons[previousIndex]: \(buttons[previousIndex])")
+        print ("previousIndex.isSelected = \(buttons[previousIndex].isSelected)")
+        print ("selectedIndex: \(selectedIndex)")
+        
         
         // Remove the previous viewController. Again, since we have an array full of view controllers, we can access them using tag numbers that correspond to their index values.
         let previousVC = viewControllers[previousIndex]
@@ -86,10 +97,24 @@ class TabBarViewController: UIViewController {
         // call the viewDidAppear method of the view controller you are adding using the didMove(toParentController: self) **I don't understand this yet.**
         vc.didMove(toParentViewController: self)
         
+        if sender.tag == 1 {
+            exploreButton.stopAnimating()
+            exploreButton.isHidden = true
+        }
+        
     }
     
     
-    
+    func bobTheExploreButton() {
+        
+        exploreButtonOriginalY = exploreButton.center.y
+        exploreButton.center.y += 5
+        
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.autoreverse, .curveEaseInOut, .repeat], animations:{
+            self.exploreButton.center.y = self.exploreButtonOriginalY
+        })
+        
+    }
     
     
     
