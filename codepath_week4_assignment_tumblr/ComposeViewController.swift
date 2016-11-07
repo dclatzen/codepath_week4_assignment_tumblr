@@ -46,13 +46,17 @@ class ComposeViewController: UIViewController {
         
         for (index, button) in buttonArray.enumerated() {
             
-            var delayAmount: Double! = 0.2
+            let delay = (Double(Double(arc4random()) / Double(UINT32_MAX)) / 4)
             
-            UIView.animate(withDuration: 0.3, delay: delayAmount, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: [.curveEaseOut], animations: {
+            print ("Button: \(button)")
+            print ("Delay: \(delay)")
+            
+            UIView.animate(withDuration: 0.4, delay: delay, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: [.curveEaseOut], animations: {
                 button.center.y = locationArray[index]
             })
             
-            delayAmount = delayAmount + 0.1
+
+            
             
         }
         
@@ -61,7 +65,7 @@ class ComposeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         for button in buttons {
             
-            let goOffScreen = CGFloat(arc4random_uniform(2000) + 700)
+            let goOffScreen = CGFloat(arc4random_uniform(1000) + 700)
             
             button.center.y = goOffScreen
         }
